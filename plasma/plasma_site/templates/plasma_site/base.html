@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLASMA EVENTS</title>
+    <link rel="stylesheet" href="{% static 'plasma_site/base.css' %}">
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    <div class="root">
+        <header class="header-menu">
+            <div class="header-menu__placeholder"></div>
+            <a href="./index.html"><img class="header-menu__logo" src="{% static 'plasma_site/img/PLASMA logo bialy_znak (1).png' %}"/></a>
+            <img class="header-menu__menu" href="{% static 'plasma_site/Menu.svg' %}">
+        </header>
+      <main class="site-content">
+        {% block content %}
+        {% endblock %}
+      </main>
+        <footer class="footer">
+            <img class="footer__logo" src="{% static 'plasma_site/img/PLASMA logo bialy_znak (1).png' %}"/>
+            <img class= 'footer__typo' src="{% static 'plasma_site/img/PLASMA logo biale_typo (1).png' %}"/>
+            <div class="footer-mail">
+                <img src="{% static 'plasma_site/img/icon_email.svg' %}" class ='footer-mail__icon'/>
+                <a class="footer-mail__text">plasmaevents.pl@gmail.com</a>
+            </div>
+            <div class="footer-socials">
+                <img class="footer-socials__icon" src="{% static 'plasma_site/img/icon_tik_tok.svg' %}"/>
+                <img class="footer-socials__icon" src="{% static 'plasma_site/img/icon_instagram.svg' %}"/>
+                <img class="footer-socials__icon" src="{% static 'plasma_site/img/icon_facebook.svg' %}"/>
+            </div>
+            <nav class="footer-navmenu">
+                <a class="footer-navemenu__item">Kontakt</a>
+                <a class="footer-navemenu__item">Regulamin</a>
+                <a class="footer-navemenu__item">Polityka Prywatności</a>
+            </nav>
+            <p>Copyright 2022 Plasma Events</p>
+            <div class="footer__bottom"></div>
+        </footer>
+    </div>
+</body>
+</html>
