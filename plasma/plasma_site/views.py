@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Article
+from .models import Article, Link
 
 def index(request):
     intro = Article.objects.get(title='intro')
@@ -8,6 +8,11 @@ def index(request):
     about1 = Article.objects.get(title='about1')
     about2 = Article.objects.get(title='about2')
     about_contact = Article.objects.get(title='about_contact')
+
+    instagram = Link.objects.get(name='Instagram')
+    tiktok = Link.objects.get(name='Tiktok')
+    facebook = Link.objects.get(name='Facebook')
+
     context = {'arts': {
         'intro': intro,
         'party_des1': party_des1,
@@ -15,7 +20,11 @@ def index(request):
         'about1': about1,
         'about2': about2,
         'about_contact' : about_contact
-    },
+    }, 'socials': {
+        'instagram': instagram,
+        'facebook': facebook,
+        'tiktok': tiktok,
+    }
     }
 
     return render(request, 'plasma_site/index.html', context)
