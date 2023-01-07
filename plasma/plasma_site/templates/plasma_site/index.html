@@ -2,6 +2,11 @@
 {% load static %}
 {% block css%}
     <link rel="stylesheet" href="{% static 'plasma_site/index.css' %}">
+    <style>
+      .about__picture{
+         background: url( '{% static 'plasma_site/img/Zdjęcie-strona-glowna.png' %}');
+      }
+    </style>
 {% endblock%}
 {% block content %}
         <section class="promo-video">
@@ -17,7 +22,7 @@
             <p class="event__paragraph">
                     {{arts.party_des2.text|linebreaksbr}}
             </p>
-            <a href="./form.html"><button class="event__button">Kup bilet</button></a>
+            <a href="{% url 'tickets' %}"><button class="event__button">Kup bilet</button></a>
         </section>
         <section class="about__1 about">
             <h1 class="about__heading">Plasma Events</h1>
@@ -46,7 +51,8 @@
         <section class="contact__form contact">
             <h1>Let's stay in touch</h1>
             <img class="contact__background" src="{% static 'plasma_site/img/Fala 3.svg' %}"/>
-            <form class="contact-form">
+            <form class="contact-form" method="post">
+                {% csrf_token %}
                 <input class="contact-form__input contact-form__input--normal" type="text" placeholder="Imię"/>
                 <input class="contact-form__input contact-form__input--normal" type="text" placeholder="Nazwisko"/>
                 <input class="contact-form__input contact-form__input--normal" type="email" placeholder="E-mail"/>

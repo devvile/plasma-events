@@ -28,3 +28,8 @@ def index(request):
     }
 
     return render(request, 'plasma_site/index.html', context)
+
+
+def tickets(request):
+    context = {}
+    return render(request, 'plasma_site/tickets.html', context)
