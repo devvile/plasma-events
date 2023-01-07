@@ -10,34 +10,31 @@
         <section class="event">
             <img class="event__background" src="{% static 'plasma_site/img/Fala 1.svg' %}"/>
             <h2 class="event__heading">Plasma</h2>
-            <h3 class="event__subheading">{{intro.text|linebreaksbr}}</h3>
+            <h3 class="event__subheading">{{arts.intro.text|linebreaksbr}}</h3>
             <p class="event__paragraph">
-                    {{party_des1.text|linebreaksbr}}
+                    {{arts.party_des1.text|linebreaksbr}}
             </p>
             <p class="event__paragraph">
-                    {{party_des2.text|linebreaksbr}}
+                    {{arts.party_des2.text|linebreaksbr}}
             </p>
             <a href="./form.html"><button class="event__button">Kup bilet</button></a>
         </section>
         <section class="about__1 about">
             <h1 class="about__heading">Plasma Events</h1>
             <p class="about__paragraph">
-                {{about1.text|linebreaksbr}}
+                {{arts.about1.text|linebreaksbr}}
             </p>
             <img class="about__background" src="{% static 'plasma_site/img/Fala 2.svg' %}"/>
         </section>
         <section class="about__2 about">
-            <p class="about__paragraph about__paragraph2"> Pomysł narodził się w 2018 roku, kiedy to jeden z założycieli kolektywu, wizjoner i entrepreneur, zakochał się w unikalnej
-                i niepowtarzalnej atmosferze festiwali Psytrance. W 2019 roku powstał pierwszy festiwal na którym poznał drugą postać, muzyka i artystę o niebywałym umyśle analitycznym,
-                 dzielącego tę samą pasję - Psytrance.
+            <p class="about__paragraph about__paragraph2">
+                {{arts.about2.text|linebreaksbr}}
            </p>
             <div class="about__picture"></div>
         </section>
         <section class="contact__general contact">
             <p class="about__paragraph contact__text">
-                Od 2019 roku razem stworzyli blisko 20 imprez pod różnymi nazwami
-                i flagami, w wielu niszach muzyki elektronicznej, od wielogatunkowego Techno, przez Downtempo i Progressive Psytrance do najbardziej laserowych brzmień Psychedelic Trance,
-                by w końcu założyć swoją markę i promować muzykę Psytrance pod wspólnym szyldem - Plasma Events.
+                {{arts.about_contact.text|linebreaksbr}}
             </p>
             <h3 class="contacts-call-to-action">FOLLOW US</h3>
             <div class="contact-socials">

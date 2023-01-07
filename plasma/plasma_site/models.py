@@ -8,3 +8,11 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Link(models.Model):
+    name = models.CharField(max_length=50)
+    link = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.title
