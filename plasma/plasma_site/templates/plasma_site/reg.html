@@ -5,9 +5,36 @@
     <link rel="stylesheet" href="{% static 'plasma_site/reg_privacy.css' %}">
 {% endblock %}
 {% block content %}
-<section class="reg">
-  <h3>Regulamin</h3>
-    <p>{{articles.reg_intro.text}}</p>
+<section>
+    <h1>Regulamin</h1>
+    <article class="reg">
+      <h4>{{articles.reg_intro.title}}</h4>
+        <p>{{articles.reg_intro.text}}</p>
+    </article>
+    <article class="reg">
+      <h4>{{articles.license.title}}</h4>
+        <p>{{articles.license.text}}</p>
+    </article>
+    <article class="reg">
+      <h4>{{articles.refs.title}}</h4>
+        <p>{{articles.refs.text}}</p>
+    </article>
+    <article class="reg">
+      <h4>{{articles.disclaimer.title}}</h4>
+        <p>{{articles.disclaimer.text}}</p>
+    </article>
+    <article class="reg">
+      <h4>{{articles.copyright.title}}</h4>
+        <p>{{articles.copyright.text}}</p>
+    </article>
+    <article class="reg">
+      <h4>{{articles.links.title}}</h4>
+        <p>{{articles.links.text}}</p>
+    </article>
+    <article class="reg">
+      <h4>{{articles.disclaimer2.title}}</h4>
+        <p>{{articles.disclaimer2.text}}</p>
+    </article>
 </section>
 
 {% endblock %}

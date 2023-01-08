@@ -22,7 +22,7 @@ class Link(models.Model):
 class Bullet(models.Model):
     name = models.CharField(max_length=50)
     text = models.CharField(max_length=150)
-    list= models.CharField(max_length=150)
+    list = models.CharField(max_length=150)
 
     def __str__(self):
         return self.name
