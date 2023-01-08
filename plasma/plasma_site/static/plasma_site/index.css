@@ -107,9 +107,10 @@
 .about__picture{
     background-size: cover;
     border: 0;
-    height: 10vw;
+    height: 120vw;
     position: absolute;
     top:0;
+    width:100%;
 }
 
 .contact__general{
