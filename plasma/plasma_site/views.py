@@ -54,7 +54,21 @@ def regulations(request):
 
 
 def privacy_policy(request):
-    context = {}
+    context = {
+        'bullets': {
+                    },
+        'articles': {
+            'intro_priv': Article.objects.get(title='intro_priv'),
+            'rodo1': Article.objects.get(title='rodo1'),
+            'rodo2': Article.objects.get(title='rodo2'),
+            'rights': Article.objects.get(title='rights'),
+            'links2': Article.objects.get(title='links2'),
+            'protection': Article.objects.get(title='protection'),
+            'reaveal': Article.objects.get(title='reaveal'),
+            'contact_info': Article.objects.get(title='contact_info'),
+        }
+    }
+
     return render(request, 'plasma_site/privacy_policy.html', context)
 
 
