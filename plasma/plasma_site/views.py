@@ -33,3 +33,18 @@ def index(request):
 def tickets(request):
     context = {}
     return render(request, 'plasma_site/tickets.html', context)
+
+
+def regulations(request):
+    context = {}
+    return render(request, 'plasma_site/reg.html', context)
+
+
+def privacy_policy(request):
+    context = {}
+    return render(request, 'plasma_site/privacy_policy.html', context)
+
+
+def success(request):
+    context = {}
+    return render(request, 'plasma_site/success.html', context)
