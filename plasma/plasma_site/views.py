@@ -19,7 +19,7 @@ def index(request):
         'party_des2': party_des2,
         'about1': about1,
         'about2': about2,
-        'about_contact' : about_contact
+        'about_contact': about_contact
     }, 'socials': {
         'instagram': instagram,
         'facebook': facebook,
@@ -36,7 +36,20 @@ def tickets(request):
 
 
 def regulations(request):
-    context = {}
+    context = {
+        'bullets': {
+                    },
+        'articles': {
+            'reg_intro': Article.objects.get(title='reg_intro'),
+            'cookies': Article.objects.get(title='cookies'),
+            'licence': Article.objects.get(title='licence'),
+            'refs': Article.objects.get(title='refs'),
+            'disclaimer': Article.objects.get(title='disclaimer'),
+            'copyrights': Article.objects.get(title='copyright'),
+            'links': Article.objects.get(title='links'),
+            'disclaimer2': Article.objects.get(title='disclaimer2'),
+        }
+    }
     return render(request, 'plasma_site/reg.html', context)
 
 
