@@ -20,7 +20,6 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin:15px 0 0 0;
     width: 100%;
 }
 
@@ -62,12 +61,20 @@ margin:15px 0 45px;
 }
 
 .reg{
+    display:flex;
     margin-top:30px;
 }
 
 .reg__info{
     margin-left: 10px;
     text-align: left;
+    z-index:20;
+}
+
+.reg__checkbox, .reg__text, .reg__link{
+    z-index:20;
+    display:inline;
+    position:relative
 }
 
 .reg__text{
@@ -77,10 +84,17 @@ margin:15px 0 45px;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+    width: 100%;
 }
 
 .reg__link{
     color:var(--link-color)
+}
+
+.tickets-form__cover{
+    position:absolute;
+    top:0;
+    width:100%;
 }
 
 .ticket-form__input--wide{
@@ -88,16 +102,10 @@ margin:15px 0 45px;
     width: 227px;
 }
 
-.ticket-form__input--mid{
-    margin:0;
-    width: 128px;
-}
-
 .ticket-form__input--small{
     margin: 0;
     width: 47px;
 }
-
 
 .-mt25{
     margin-top: 25px;
@@ -115,4 +123,5 @@ margin:15px 0 45px;
     gap: 10px;
     margin:15px 0 0 0;
     padding: 13px 17px;
+    z-index:20;
 }

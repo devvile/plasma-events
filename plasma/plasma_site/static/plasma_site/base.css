@@ -40,6 +40,10 @@ a,.mini-text,p{
     font-weight: 400;
 }
 
+a{
+    text-decoration: none;
+}
+
 p{
     font-size: 15px;
     line-height: 22px;

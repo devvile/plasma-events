@@ -5,12 +5,10 @@
     <style>
       .form{
         align-items: center;
-        background: url( '{% static 'plasma_site/img/Fala 4.svg' %}');
         background-size: cover;
         border: 0;
         display: flex;
         flex-direction: column;
-        height: 180vw;
         margin-top: 84px;
         position:relative;
         bottom:180px;
@@ -22,6 +20,7 @@
 {% block content %}
 <img class="tickets_cover" src="{% static 'plasma_site/img/Cover-wersjanastrone.png' %}"/>
 <section class="form">
+            <img class= 'tickets-form__cover' src="{% static 'plasma_site/img/Fala 4.svg' %}" />
             <div class="form-title form__title">
                 <h2 class="form-title__party_name">PLASMA</h2>
                 <h4 class="form-title__party_date">18/02/23</h4>
@@ -41,7 +40,7 @@
                     <p class="form-body-info"> – nie wymagane</p>
                 </div>
                 <div class="reg">
-                    <input type="checkbox"/>
+                    <input class="reg__checkbox" type="checkbox"/>
                     <div class="reg__info">
                         <span class="reg__text">Akceptuje </span><a class="reg__link">regulamin</a><span class="reg__text"> i </span><a class="reg__link">politykę prywatności</a><span class="reg__text"> strony Plasma Events</span>
                     </div>
@@ -63,5 +62,6 @@
                 </div>
                 <a href="./success.html"><button class="buy__button">Kup bilet</button></a>
             </form>
+
         </section>
 {% endblock %}
