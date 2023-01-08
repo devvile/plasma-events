@@ -104,9 +104,17 @@
     border: 0;
 }
 
+.about__title{
+  margin:150px 0 0 0;
+  height:20px;
+  width:261px;
+  padding:0;
+  text-align:left;
+}
+
 .about__picture{
     border: 0;
-    height: 120vw;
+    height: 130vw;
     position: absolute;
     top:0;
     width:100%;
