@@ -2,7 +2,7 @@
     align-items:center;
     display:flex;
     flex-direction:column;
-    height:400px;
+    height:435px;
     margin-top:150px;
 }
 
@@ -25,5 +25,5 @@
 .success__cover{
     position:absolute;
     top:25px;
-    width:100%;
+    width:100vw;
 }
