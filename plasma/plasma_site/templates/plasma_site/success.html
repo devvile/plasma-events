@@ -6,5 +6,11 @@
 {% endblock %}
 
 {% block content %}
-<h1>SUCCESS</h1>
+<section class="success">
+    <img class="success__icon" src="{% static 'plasma_site/img/Success Icon.svg' %}"/>
+    <img class="success__cover" src="{% static 'plasma_site/img/Orbita.svg' %}"/>
+    <h4 class="success__info">{{success.header}}</h4>
+    <p class="success__text">{{success.text}}</p>
+</section>
+
 {% endblock %}

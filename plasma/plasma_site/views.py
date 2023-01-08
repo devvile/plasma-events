@@ -73,5 +73,5 @@ def privacy_policy(request):
 
 
 def success(request):
-    context = {}
+    context = {'success': Article.objects.get(title='success') }
     return render(request, 'plasma_site/success.html', context)
