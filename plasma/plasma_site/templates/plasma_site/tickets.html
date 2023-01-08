@@ -1,10 +1,67 @@
 {% extends 'plasma_site/base.html' %}
 {% load static %}
-
-{% block css%}
+{% block css %}
     <link rel="stylesheet" href="{% static 'plasma_site/tickets.css' %}">
+    <style>
+      .form{
+        align-items: center;
+        background: url( '{% static 'plasma_site/img/Fala 4.svg' %}');
+        background-size: cover;
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        height: 180vw;
+        margin-top: 84px;
+        position:relative;
+        bottom:180px;
+        text-align: center;
+      }
+    </style>
 {% endblock %}
 
 {% block content %}
 <img class="tickets_cover" src="{% static 'plasma_site/img/Cover-wersjanastrone.png' %}"/>
+<section class="form">
+            <div class="form-title form__title">
+                <h2 class="form-title__party_name">PLASMA</h2>
+                <h4 class="form-title__party_date">18/02/23</h4>
+                <p class="form-title__party_price">1 pula cena biletu: 40 zł</p>
+                <h4>Formularz zakupu biletu</h4>
+            </div>
+            <form class="form-body">
+                <input type="text" placeholder="Imię" class='ticket-form__input ticket-form__input--wide'/>
+                <input type="text" placeholder="Nazwisko" class='ticket-form__input ticket-form__input--wide'/>
+                <input type="email" placeholder="Email"  class='ticket-form__input ticket-form__input--wide'/>
+                <div class="form-body-input-wrapper">
+                    <input type="date" placeholder="Data urodzenia" class='ticket-form__input ticket-form__input--mid'/>
+                    <input type="number" placeholder="Ilość" class='ticket-form__input ticket-form__input--small'/>
+                </div>
+                <div class="form-body-input-wrapper -mt25" >
+                    <input type="text" placeholder="Kod rabatowy" class='ticket-form__input ticket-form__input--mid'>
+                    <p class="form-body-info"> – nie wymagane</p>
+                </div>
+                <div class="reg">
+                    <input type="checkbox"/>
+                    <div class="reg__info">
+                        <span class="reg__text">Akceptuje </span><a class="reg__link">regulamin</a><span class="reg__text"> i </span><a class="reg__link">politykę prywatności</a><span class="reg__text"> strony Plasma Events</span>
+                    </div>
+                </div>
+                <div class="payment-amount">
+                    <p>do zapłaty: </p>
+                    <h1 class="payment-amount__number">00,00zł</h1>
+                </div>
+                <p>Wybierz formę płatności:</p>
+                <div class="payment-wrapper">
+                    <div class="payment-types-icons">
+                        <svg width="42" height="37" viewBox="0 0 42 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M35.5832 0.114746H6.4165C4.7589 0.114746 3.16919 0.934711 1.99709 2.39426C0.824984 3.8538 0.166504 5.83337 0.166504 7.89748V28.6515C0.166504 30.7156 0.824984 32.6951 1.99709 34.1547C3.16919 35.6142 4.7589 36.4342 6.4165 36.4342H35.5832C37.2408 36.4342 38.8305 35.6142 40.0026 34.1547C41.1747 32.6951 41.8332 30.7156 41.8332 28.6515V7.89748C41.8332 5.83337 41.1747 3.8538 40.0026 2.39426C38.8305 0.934711 37.2408 0.114746 35.5832 0.114746ZM18.9165 26.0572H10.5832C10.0306 26.0572 9.50073 25.7839 9.11003 25.2974C8.71933 24.8109 8.49984 24.151 8.49984 23.463C8.49984 22.7749 8.71933 22.1151 9.11003 21.6286C9.50073 21.142 10.0306 20.8687 10.5832 20.8687H18.9165C19.469 20.8687 19.9989 21.142 20.3896 21.6286C20.7803 22.1151 20.9998 22.7749 20.9998 23.463C20.9998 24.151 20.7803 24.8109 20.3896 25.2974C19.9989 25.7839 19.469 26.0572 18.9165 26.0572ZM31.4165 26.0572H27.2498C26.6973 26.0572 26.1674 25.7839 25.7767 25.2974C25.386 24.8109 25.1665 24.151 25.1665 23.463C25.1665 22.7749 25.386 22.1151 25.7767 21.6286C26.1674 21.142 26.6973 20.8687 27.2498 20.8687H31.4165C31.969 20.8687 32.4989 21.142 32.8896 21.6286C33.2803 22.1151 33.4998 22.7749 33.4998 23.463C33.4998 24.151 33.2803 24.8109 32.8896 25.2974C32.4989 25.7839 31.969 26.0572 31.4165 26.0572ZM37.6665 10.4917H4.33317V7.89748C4.33317 7.20945 4.55266 6.54959 4.94337 6.06308C5.33407 5.57656 5.86397 5.30324 6.4165 5.30324H35.5832C36.1357 5.30324 36.6656 5.57656 37.0563 6.06308C37.447 6.54959 37.6665 7.20945 37.6665 7.89748V10.4917Z" fill="white"/>
+                        </svg>
+                        <svg width="42" height="37" viewBox="0 0 42 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M35.5832 0.114746H6.4165C4.7589 0.114746 3.16919 0.934711 1.99709 2.39426C0.824984 3.8538 0.166504 5.83337 0.166504 7.89748V28.6515C0.166504 30.7156 0.824984 32.6951 1.99709 34.1547C3.16919 35.6142 4.7589 36.4342 6.4165 36.4342H35.5832C37.2408 36.4342 38.8305 35.6142 40.0026 34.1547C41.1747 32.6951 41.8332 30.7156 41.8332 28.6515V7.89748C41.8332 5.83337 41.1747 3.8538 40.0026 2.39426C38.8305 0.934711 37.2408 0.114746 35.5832 0.114746ZM18.9165 26.0572H10.5832C10.0306 26.0572 9.50073 25.7839 9.11003 25.2974C8.71933 24.8109 8.49984 24.151 8.49984 23.463C8.49984 22.7749 8.71933 22.1151 9.11003 21.6286C9.50073 21.142 10.0306 20.8687 10.5832 20.8687H18.9165C19.469 20.8687 19.9989 21.142 20.3896 21.6286C20.7803 22.1151 20.9998 22.7749 20.9998 23.463C20.9998 24.151 20.7803 24.8109 20.3896 25.2974C19.9989 25.7839 19.469 26.0572 18.9165 26.0572ZM31.4165 26.0572H27.2498C26.6973 26.0572 26.1674 25.7839 25.7767 25.2974C25.386 24.8109 25.1665 24.151 25.1665 23.463C25.1665 22.7749 25.386 22.1151 25.7767 21.6286C26.1674 21.142 26.6973 20.8687 27.2498 20.8687H31.4165C31.969 20.8687 32.4989 21.142 32.8896 21.6286C33.2803 22.1151 33.4998 22.7749 33.4998 23.463C33.4998 24.151 33.2803 24.8109 32.8896 25.2974C32.4989 25.7839 31.969 26.0572 31.4165 26.0572ZM37.6665 10.4917H4.33317V7.89748C4.33317 7.20945 4.55266 6.54959 4.94337 6.06308C5.33407 5.57656 5.86397 5.30324 6.4165 5.30324H35.5832C36.1357 5.30324 36.6656 5.57656 37.0563 6.06308C37.447 6.54959 37.6665 7.20945 37.6665 7.89748V10.4917Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+                <a href="./success.html"><button class="buy__button">Kup bilet</button></a>
+            </form>
+        </section>
 {% endblock %}
