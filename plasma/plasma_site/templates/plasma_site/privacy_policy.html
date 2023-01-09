@@ -5,39 +5,42 @@
     <link rel="stylesheet" href="{% static 'plasma_site/reg_privacy.css' %}">
 {% endblock %}
 {% block content %}
-<section class="reg">
-  <h3>Polityka Prywatności</h3>
-    <article>
-        <p>{{articles.intro_priv.text}}</p>
-    </article>
-    <article>
-        <h4>{{articles.rodo1.header}}</h4>
-        <p>{{articles.rodo1.text}}</p>
-    </article>
-    <article>
-        <h4>{{articles.rodo2.header}}</h4>
-        <p>{{articles.rodo2.text}}</p>
-    </article>
-    <article>
-        <h4>{{articles.rights.header}}</h4>
-        <p>{{articles.rights.text}}</p>
-    </article>
-    <article>
-        <h4>{{articles.links2.header}}</h4>
-        <p>{{articles.links2.text}}</p>
-    </article>
-    <article>
-        <h4>{{articles.protection.header}}</h4>
-        <p>{{articles.protection.text}}</p>
-    </article>
-    <article>
-        <h4>{{articles.reaveal.header}}</h4>
-        <p>{{articles.reaveal.text}}</p>
-    </article>
-    <article>
-        <h4>{{articles.contact_info.header}}</h4>
-        <p>{{articles.contact_info.text}}</p>
-    </article>
+<section class="priv">
+    <img class="priv__cover" src="{% static 'plasma_site/img/Fala 5.svg' %}"/>
+    <div class="priv-wrapper">
+        <h3 class="priv__header --center">Polityka Prywatności</h3>
+        <article>
+            <p>{{articles.intro_priv.text}}</p>
+        </article>
+        <article>
+            <h4 class="priv__subheading --center">{{articles.rodo1.header}}</h4>
+            <p class="priv__text">{{articles.rodo1.text}}</p>
+        </article>
+        <article>
+            <h4 class="priv__subheading --center">{{articles.rodo2.header}}</h4>
+            <p class="priv__text">{{articles.rodo2.text}}</p>
+        </article>
+        <article>
+            <h4 class="priv__subheading --center">{{articles.rights.header}}</h4>
+            <p class="priv__text">{{articles.rights.text}}</p>
+        </article>
+        <article>
+            <h4 class="priv__subheading --center">{{articles.links2.header}}</h4>
+            <p class="priv__text">{{articles.links2.text}}</p>
+        </article>
+        <article>
+            <h4 class="priv__subheading --center">{{articles.protection.header}}</h4>
+            <p class="priv__text">{{articles.protection.text}}</p>
+        </article>
+        <article>
+            <h4 class="priv__subheading --center">{{articles.reaveal.header}}</h4>
+            <p class="priv__text">{{articles.reaveal.text}}</p>
+        </article>
+        <article>
+            <h4 class="priv__subheading --center">{{articles.contact_info.header}}</h4>
+            <p class="priv__text">{{articles.contact_info.text}}</p>
+        </article>
+    </div>
 </section>
 
 {% endblock %}
