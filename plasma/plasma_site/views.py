@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Article, Link
+from .models import Article, Link, Bullet
 
 def index(request):
     intro = Article.objects.get(title='intro')
@@ -55,13 +55,13 @@ def regulations(request):
 
 def privacy_policy(request):
     context = {
-        'bullets': {
-                    },
+        'bullets': Bullet.objects.filter(list='prawo'),
         'articles': {
             'intro_priv': Article.objects.get(title='intro_priv'),
             'rodo1': Article.objects.get(title='rodo1'),
             'rodo2': Article.objects.get(title='rodo2'),
-            'rights': Article.objects.get(title='rights'),
+            'rights1': Article.objects.get(title='rights1'),
+            'rights2': Article.objects.get(title='rights2'),
             'links2': Article.objects.get(title='links2'),
             'protection': Article.objects.get(title='protection'),
             'reaveal': Article.objects.get(title='reaveal'),

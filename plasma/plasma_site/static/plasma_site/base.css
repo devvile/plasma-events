@@ -28,7 +28,7 @@ body{
     background-color: var(--black-main);
 }
 
-p,a, btn, .mini-text{
+p,a, btn, .mini-text, li{
     color:var(--light-secondary);
     font-family: 'Poppins';
     font-style: normal;
@@ -36,7 +36,7 @@ p,a, btn, .mini-text{
     z-index: 2;
 }
 
-a,.mini-text,p{
+a,.mini-text,p, li{
     font-weight: 400;
 }
 
@@ -44,9 +44,14 @@ a{
     text-decoration: none;
 }
 
-p{
+p, li{
     font-size: 15px;
     line-height: 22px;
+}
+
+ul{
+margin: 5px 0;
+padding:10px 20px;
 }
 
 a{

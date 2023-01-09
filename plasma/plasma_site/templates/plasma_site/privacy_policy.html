@@ -21,8 +21,14 @@
             <p class="priv__text">{{articles.rodo2.text}}</p>
         </article>
         <article>
-            <h4 class="priv__subheading --center">{{articles.rights.header}}</h4>
-            <p class="priv__text">{{articles.rights.text}}</p>
+            <h4 class="priv__subheading --center">{{articles.rights1.header}}</h4>
+            <p class="priv__text">{{articles.rights1.text}}</p>
+            <ul>
+                {% for bullet in bullets %}
+                <li> {{bullet.text}}</li>
+                {% endfor %}
+            </ul>
+            <p class="priv__text">{{articles.rights2.text}}</p>
         </article>
         <article>
             <h4 class="priv__subheading --center">{{articles.links2.header}}</h4>
