@@ -37,17 +37,28 @@ def tickets(request):
 
 def regulations(request):
     context = {
-        'bullets': {
+        'bullets': {'licence': Bullet.objects.filter(list='licence'),
+                    'licence2': Bullet.objects.filter(list='licence2'),
+                    'refs1': Bullet.objects.filter(list='refs'),
+                    'refs2': Bullet.objects.filter(list='refs2'),
+                    'refs3': Bullet.objects.filter(list='refs3'),
+                    'disclaimer': Bullet.objects.filter(list='disclaimer'),
                     },
         'articles': {
             'reg_intro': Article.objects.get(title='reg_intro'),
             'cookies': Article.objects.get(title='cookies'),
-            'licence': Article.objects.get(title='licence'),
-            'refs': Article.objects.get(title='refs'),
+            'licence1': Article.objects.get(title='licence1'),
+            'licence2': Article.objects.get(title='licence2'),
+            'licence3': Article.objects.get(title='licence3'),
+            'refs1': Article.objects.get(title='refs1'),
+            'refs2': Article.objects.get(title='refs2'),
+            'refs3': Article.objects.get(title='refs3'),
+            'refs4': Article.objects.get(title='refs4'),
             'disclaimer': Article.objects.get(title='disclaimer'),
             'copyrights': Article.objects.get(title='copyright'),
             'links': Article.objects.get(title='links'),
-            'disclaimer2': Article.objects.get(title='disclaimer2'),
+            'disclaimer2a': Article.objects.get(title='disclaimer2a'),
+            'disclaimer2b': Article.objects.get(title='disclaimer2b'),
         }
     }
     return render(request, 'plasma_site/reg.html', context)

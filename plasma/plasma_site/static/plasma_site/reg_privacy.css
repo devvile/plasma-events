@@ -30,6 +30,7 @@ text-align:center;
 
 .priv__text, .reg__text{
     margin:0;
+    text-align: justify;
 }
 
 .priv__subheading, .reg__subheading{

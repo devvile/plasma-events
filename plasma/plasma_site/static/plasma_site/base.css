@@ -73,7 +73,7 @@ button , .button{
     width: 261px;
 }
 
-.mini-text, .reg__text, .reg__link{
+.mini-text, .reg__link{
     font-size: 12px;
     line-height: 18px;
 }
