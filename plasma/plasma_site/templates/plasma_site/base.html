@@ -15,7 +15,14 @@
         <header class="header-menu">
             <div class="header-menu__placeholder"></div>
             <a href="{% url 'index' %}"><img class="header-menu__logo" src="{% static 'plasma_site/img/PLASMA logo bialy_znak (1).png' %}"/></a>
-            <img class="header-menu__menu" src="{% static 'plasma_site/img/Menu.svg' %}">
+            <img class="header-menu__menu --mobile" src="{% static 'plasma_site/img/Menu.svg' %}">
+            <div class="header-menu__placeholder --desktop"></div>
+            <ul class="header-menu__navbar --desktop">
+                <li><a class="header-menu__navbar-item">Next Event</a></li>
+                <li><a class="header-menu__navbar-item">O nas</a></li>
+                <li><a class="header-menu__navbar-item">Kup bilet</a></li>
+                <li><a class="header-menu__navbar-item">Kontakt</a></li>
+            </ul>
         </header>
       <main class="site-content">
         {% block content %}
