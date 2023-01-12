@@ -237,10 +237,12 @@ h4{
        justify-content:space-between;
        list-style:none;
        position:absolute;
+       width:300px;
        right:30px;
-       width:310px;
    }
+
    .header-menu__navbar--item{
         font-size:15px;
+        margin:0 30px;
    }
  }

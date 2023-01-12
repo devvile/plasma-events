@@ -71,6 +71,11 @@
     width: 261px;
 }
 
+.about__paragraph{
+    position:relative;
+    top:10px;
+}
+
 .event__paragraph--preline{
     white-space: pre-line;
 }
@@ -84,11 +89,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position:relative;
 }
 
 .about__1{
-    height: 526px;
-    position: relative;
+    height: 566px;
     width: 100%;
 }
 
@@ -103,16 +108,17 @@
 }
 
 .about__background{
-    top:0px;
     border: 0;
 }
 
 .about__title{
-  margin:150px 0 0 0;
   height:20px;
-  width:261px;
-  padding:0;
+  margin:150px 0 0 0;
+  position:relative;
+  top:40px;
   text-align:left;
+  padding:0;
+  width:261px;
 }
 
 .about__picture{
@@ -173,6 +179,13 @@
 }
 
 @media (min-width:800px){
+
+    .about__background {
+        position:absolute;
+        top;0;
+        z-index:8;
+    }
+
     .event{
         flex-direction:column;
         justify-content:center;
@@ -197,9 +210,11 @@
     }
 
     .plasma-logotype{
-        height:170px;
+        height:150px;
+        top:250px;
         width:570px;
         z-index:10;
+        background-color:red;
     }
 
     .--mb-60{
